@@ -24,7 +24,7 @@ export default function Hero() {
             className="space-y-2"
           >
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-              Crafted for Life's Moments
+              Crafted by Kevi the photographer 
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl">
               Discover our collection of premium men's rings for every occasion
@@ -37,7 +37,7 @@ export default function Hero() {
             className="w-full max-w-sm space-y-2"
           >
             <Button className="w-full" size="lg">
-              Shop Now
+              Download now
             </Button>
           </motion.div>
         </div>

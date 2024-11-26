@@ -1,12 +1,20 @@
 import "./globals.css"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Playfair_Display, Lato } from "next/font/google"
+import { ThemeProvider } from "@/components/theme-provider"
 
-const inter = Inter({ subsets: ["latin"] })
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+})
+const lato = Lato({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-lato",
+})
 
-export const metadata: Metadata = {
-  title: "NewmanBands",
-  description: "Premium men's rings for every occasion",
+export const metadata = {
+  title: "Tony Photography",
+  description: "Professional photography by Tony",
 }
 
 export default function RootLayout({
@@ -15,8 +23,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${playfair.variable} ${lato.variable} font-sans`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

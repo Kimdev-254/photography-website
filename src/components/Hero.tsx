@@ -28,7 +28,7 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          Tony Photography
+          John Doe Photography
         </motion.h1>
         <motion.p
           className="text-xl md:text-2xl mb-8"

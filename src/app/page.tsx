@@ -1,25 +1,23 @@
-import Header from "@/components/Header"
+"use client"
+import "./globals.css"
+import { useEffect } from "react"
+import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
-import ShopByColor from "@/components/ShopByColor"
-import TopRated from "@/components/TopRated"
-import Personalize from "@/components/Personalize"
-import WhyChoose from "@/components/WhyChoose"
-import CustomerReviews from "@/components/CustomerReviews"
-import Footer from "@/components/Footer"
-
+import Gallery from "@/components/Gallery"
 export default function Home() {
+  useEffect(() => {
+    // Add smooth scrolling to the entire page
+    document.documentElement.style.scrollBehavior = "smooth"
+    return () => {
+      document.documentElement.style.scrollBehavior = "auto"
+    }
+  }, [])
+
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-1">
-        <Hero />
-        <ShopByColor />
-        <TopRated />
-        <Personalize />
-        <WhyChoose />
-        <CustomerReviews />
-      </main>
-      <Footer />
-    </div>
+    <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+      <Navbar />
+      <Hero />
+      <Gallery />
+    </main>
   )
 }
